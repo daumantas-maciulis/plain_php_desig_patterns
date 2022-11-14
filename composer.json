@@ -1,0 +1,17 @@
+{
+    "name": "daumantasmaciulis/design_patterns_plain",
+    "description": "Design patterns training project for Tesonet Mentee program",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Mentee\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Daumantas Maciulis",
+            "email": "daumantas.maciulis@surfsharkteam.com"
+        }
+    ],
+    "require": {}
+}

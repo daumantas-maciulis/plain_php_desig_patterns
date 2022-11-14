@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+    php:
+        container_name: php
+        build:
+            context: ./Docker/php
+        ports:
+            - '9001:9000'
+        volumes:
+            - .:/var/www/docker
+
+    nginx:
+        container_name: nginx
+        image: nginx:stable-alpine
+        ports:
+            - '8000:80'
+        volumes:
+            - .:/var/www/docker
+            - ./Docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+        depends_on:
+            - php
